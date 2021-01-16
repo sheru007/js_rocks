@@ -1,0 +1,29 @@
+1. JS runtime environment: consist of JS ENGINE + API + EVENT LOOP + CALLBACK QUEUE + MICROTASK QUEUE
+    Ex. spidermonkey: first engine and used in firefox, chakra by edge
+2. nodejs is js runtime environment that have everything but may be have different implementations
+
+3. When code inside JS ENGINE, then it pass through 3 step:
+    3.1 -> parsing:
+        3.1.1 -> break down into tokens like let a = 7 will be 4 tokens
+        3.1.2 -> syntax parser :  it convert the code into AST(abstract syntax tree) ex. astexplorer.net
+
+    3.2 -> compilation: it is JIT compilation and convert code into bytecode
+        3.2.1 -> interpreter: execute line by line, fast but not efficient
+        3.2.2 -> compiler: execute whole code and convert into optimized, slow but efficient
+        3.2.3 -> just in time(JIT) compilation: white interpreting, it also compile and optimized the code
+        3.2.4 -> ahead if time(AOT) compilation:  compile after interpreter and when goes to execution
+
+    3.3 -> execution: consist of MEMORY HEAD + CALL SATCK + GARBAGE COLLECTOR + OPTIMIZER
+        3.3.1 -> all parts are sync with each another
+        3.3.2 -> garbage collection: tries to free-up the memory head whenever possible, it uses mark and sweep algo
+        3.3.3 -> optimizers: in-lining, copy elision, in-line caching
+
+
+4. world best JS ENGINE: v8 by google, it's interpreter name is ignition and compiler's name is turbofan
+                        and garbage collection's name orinoco.
+
+5. chrome JS ENGINE flow: JS Code -> parser -> AST -> Ignition ----------------------> ByteCode
+                                                         \                               /
+                                                        Turbofan --> optimized machine Code
+
+6. learn about : mark and sweep, in-lining, copy elision, in-line caching

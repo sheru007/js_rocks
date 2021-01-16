@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable copy and paste</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .parent{
+            width:100vw;
+            height: 100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+    <div class="parent">
+        <div class="child">
+            <form >
+                <label>enter yourr password</label>
+                <input type="text" id="textDiv" 
+                    oncopy="return false"
+                    onpaste="return false"
+                >
+                <br />
+                <br />
+                <label>enter your confirm password</label>
+                <input type="text" id="textDiv" 
+                    onpaste="return false"
+                    oncopy="return false"
+                >
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

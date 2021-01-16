@@ -1,0 +1,64 @@
+1. undefined means a variable has been declared but has not yet been assigned a value and typeOf is undefined. 
+2. NULL is an assignment value. It can be assigned to a variable as a representation of no value and typeOf is object.
+3. There are 6 primitive data types: string, number, bigint, boolean, undefined, and symbol. All primitives are immutable
+
+4. exponential : beN - > (b * N*10)
+    0e1 -> 0
+    5e1 -> (5 * 10) -> 50
+    5e2 -> (5 * 100) -> 500
+    175e-2 -> (175 * 0.01) -> 1.75
+
+5. argument -> when you call the function VS parameter -> when you define the function
+6. JavaScript does not treat every line break as a semicolon: it usually treats line breaks 
+        as semicolons only if it can’t parse the code without the semicolons.
+        var a
+        a
+        =
+        3 console.log(a)
+        --> converted to var a
+                        a = 3
+                        console.log(a)
+        BUT BUT BUT there is exception
+        1. If a line break appears after any of [empty statement, 
+                                                var statement,
+                                                expression statement,
+                                                do-while statement
+                                                continue statement
+                                                break statement
+                                                return statement
+                                                throw statement]
+            JavaScript will always interpret that line break as a semicolon.
+        2. The second exception involves the ++ and −− operators ... If you want to use 
+            either of these operators as postfix operators, they must appear on the same 
+            line as the expression they apply to. Otherwise, the line break will be treated 
+            as a semicolon, and the ++ or -- will be parsed as a prefix operator applied to the code that follows
+            ex. x
+                ++
+                y
+                --> converted to x; ++y;
+
+7. every element in webpage have default position = static position
+8. z-index do not work without a defined position or position=static 
+    means we have to give some position like relative or anything to activate z-index.
+    -->stacking order and stacking context(for child element)
+    -->do not give z-index a very big value(NEVER)
+9. SAFE
+    Methods that do not alter the state of the server (i.e. reading from data)
+    Eg- GET, HEAD, or OPTIONS.
+    PUT and DELETE are not safe
+    All safe methods are idempotent
+10. IDEMPOTENT
+    Making multiple identical requests have the same effect as making a
+    single request. (i.e. making several DELETE request, will only resulting in
+    deleting data once with 200 return code and is likely to 400 for duplicate
+    ones)
+    Eg- GET, HEAD, PUT, and DELETE methods are idempotent, but not the
+    POST method
+11. CACHEABLE
+    Response that can be cached, that is stored to be retrieved and used later.
+    GET, POST (in some cases only) can be cached, but not PUT or DELETE.
+    Can be prevented by specific headers in the response, like Cache-Control
+    Some response codes are also cacheable
+    If both method and the status of the response are cacheable, the
+    response can be cached
+

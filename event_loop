@@ -1,0 +1,23 @@
+1. web API(not JS) : used to connect it with browser superpower like storage, timer, UI,...
+1.1 ->  setTimeout  -> used to connect with timer
+1.2 -> DOM API: used to connect it with DOM like document.getElementById
+1.3 -> fetch: used to connect with URL's
+1.4 -> localStorage, console and location are web Api and not JS
+
+2 -> JS ENGINE have call stack and above web API connect js with browsers super power
+3 -> EVENT LOOP :  it is keeps on  checking the call stack and callback queue and transfer the
+                callback function to call stack when call stack is empty.
+
+4 -> callback/task queue: all cb comes to here and then go to call stack
+
+5 -> mutation observer :  keeps on checking whether mutation is there on DOM tree or not
+
+6 -> microtask queue: high priority queue than callback queue, all cb comes from promise (ex. fetch()) and mutation observer
+                goes to this queue instead of callback queue
+
+7 -> starvation of callback queue: when task from microtask queue create another microtask, then event loop finish 
+                first all microtask and callback queue do not get change to execute for a long time
+
+
+
+

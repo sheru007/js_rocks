@@ -1,0 +1,11 @@
+1. NORMAL SCRIPT TAG -> as we click on url, first html parsing start, once the browser find script tag, it 
+        paused the html parsing, fetch the script and execute it completely and then resume the html parsing.
+        html parsing blocked while fetching and executing the script
+2. WITH ASYNC ATTRIBUTE -> in this case, html parsing start and parallely script with async attribute start 
+        getting fetch and once script fetched completely and available , browser paused the html parsing and execute
+        the script and then resule the html parsing.
+        -> html parsing blocked while executing the script. better than normal case.
+        -> it does gaurantee the order of execution of the script and use ONLY WHEN all script are independent.
+3. WITH DEFER ATTRIBUTE -> in this case, html parsing start and all script with defer get fetch parallely and execute
+        once the html parsing finish, so html parsing do not get blocked in this case.
+        -> it maintain the order of execution and best of all.

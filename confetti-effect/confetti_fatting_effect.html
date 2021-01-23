@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti Effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 62.5%;
+            /* 1rem = 10px not 16px */
+        }
+        .main-header{
+            width: 100vw;
+            height: 100vh;
+            background-color: hsl(0, 0%, 94%);
+            display: grid;
+            place-items: center;
+        }
+        .centre-div{
+            min-width: 50vw;
+            height: 40vh;
+            color: #000;
+            text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+            font-size: 7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-header">
+        <div class="centre-div">
+            <p> Learning the confetti falling effect 
+                <br />
+                using Pure html, css and javascript
+            </p>
+        </div>
+    </div>
+    <script src="./confetti.js"></script>
+    <script>
+        setTimeout(() => {confetti.start()}, 1000);
+        setTimeout(() => {confetti.stop()}, 4000);
+    </script>
+</body>
+</html>

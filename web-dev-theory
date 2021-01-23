@@ -1,0 +1,23 @@
+1. Proxy -> Alright, so we have clients (>= 1), an intermediate web server(in this case, we call it proxy), 
+            and a server. The main thing that happens in this is that the server doesn't know which client is 
+            requesting.
+            EX -> (C1. C2, C3) -> PROXY SERVER(WEB SERVER0) -> SERVER 
+2. Reverse Proxy ->  In simplest terms, a reverse proxy is a reverse of what a proxy does. Here, we will have 
+            let's say a single client, an intermediate web server, and several backend servers (>=1).
+            Ex: (C1) -> internet -> REVERSE PROXY(web server) -> (B1, B2, B3)
+3. LOAD BALANCER -> if we have a lot of requests from the clients this load balancer checks the status of each 
+            backend server and distributes the load of the requests, and sends a response faster to the client.
+4. Stateful application -> This application store an additional variable for saving the information that can work 
+            for a single instance of a server only. But it waste a lot of API call.
+5. Stateless application -> Now stateless is more API calls with the database but fewer problems exist when it comes 
+            to the interaction of the client with different backend servers.
+6. server side rendering -> it is fast to load  and read by SEO.
+            Steps: 1. hydrate instead of render 2. ReactDomServer renderToString 3. express server 4. webpack & babel
+7. client side rendering -> it is slow to load and can not read by SEO.
+8. Progressive Web App -> web app + additional power
+            Powers: 1. Responsive 2. work in offline mode 3. look like native mobile app 4. Push Notification
+                    5. Update to date in background 6. can use GPS and access hardware component
+            Backbone of PWA -> service worker
+9. Service worker -. it is an script run in background in browser. it runs only http server(means 
+                    can not work if html file open in browser)
+10. 

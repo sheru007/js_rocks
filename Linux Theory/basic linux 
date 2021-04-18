@@ -1,0 +1,21 @@
+1. file system hierarchy
+    /home - home directory for other user
+    /root - home directory for root user
+    /boot - contain all bootable files for linux karnel
+    /etc - all configuration files for hardware
+    /usr - by dafault all software install in this folder
+    /opt - optional software package(here we can install software)
+    /bin(binary files) - contains all command used by all user(include root user)
+    /sbin(system binary) - contain all commands used by root user
+    /dev(device) - all perifarel device like mouse, keyboard, printer info store in this folder
+
+2. sudo(super user do) su(switch user) - it change the $user to #root-user
+3. cat command :(ctrl+d to exit cat command)
+    1. cat > file1 -> to create files
+    2. cat file1 -> to see the content of files
+    3. cat >> file1 -> to concated the existing content with new content
+    4. cat file1 file2 > file3 -> to copy content of file1 and file2 into file3
+    5. tac file1 -> to see content in bottom to top wise
+
+4. 
+

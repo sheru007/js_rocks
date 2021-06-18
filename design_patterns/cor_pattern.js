@@ -1,0 +1,6 @@
+/*
+Chain of responsibility delegates commands to a chain of processing objects.
+
+
+
+*/

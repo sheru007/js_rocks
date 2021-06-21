@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ToDo with Drag&Drop</title>
+</head>
+<body>
+    <!-- modal -->
+    <div class="modal" id="todo_form">
+        <div class="header">
+            <div class="title">Add Todo</div>
+            <button class="btn modal-btn" data-target-modal="#todo_form">&times;</button>
+        </div>
+        <div class="body">
+            <input type="text" id="todo_input">
+            <input type="submit" value="Add Todo" id="todo_submit">
+        </div>
+    </div>
+    <!-- todo -->
+    <div class="todo-container">
+        <div class="status" id="no_status">
+            <h1>Not Status</h1>
+            <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
+            <div class="todo" draggable="true">
+                Buy Pizza
+                <span class="close">&times;</span>
+            </div>
+        </div>
+        <div class="status">
+            <h1>Not Started</h1>
+        </div>
+        <div class="status">
+            <h1>In Progress</h1>
+        </div>
+        <div class="status">
+            <h1>Completed</h1>
+        </div>
+    </div>
+    <!-- overlay for modal -->
+    <div id="overlay"></div>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>

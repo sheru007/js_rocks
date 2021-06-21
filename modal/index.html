@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Modal</title>
+</head>
+<body>
+    <button class="btn" data-target="#modal1">Modal 1</button>
+    <button class="btn" data-target="#modal2">Modal 2</button>
+    <div class="modal" id="modal1">
+        <div class="header">
+            <div class="title">Modal 1 Title</div>
+            <button class="btn modal-btn" data-target="#modal1">&times;</button>
+        </div>
+        <div class="body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At laborum, 
+            earum magnam fugiat, harum consequatur rem laudantium obcaecati minima quas 
+            recusandae sint nostrum sunt, aspernatur sequi repudiandae. Atque, eos. Esse?
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="header">
+            <div class="title">Modal 2 Title</div>
+            <button class="btn modal-btn" data-target="#modal2">&times;</button>
+        </div>
+        <div class="body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At laborum, 
+            earum magnam fugiat, harum consequatur rem laudantium obcaecati minima quas 
+            recusandae sint nostrum sunt, aspernatur sequi repudiandae. Atque, eos. Esse?
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

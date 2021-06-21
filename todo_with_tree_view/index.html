@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo With TreeView</title>
+</head>
+<body>
+    
+    <ul class="todos" id="totos">
+        <li class="todo">task 1</li>
+        <li class="todo">task 2</li>
+        <li>
+            <div class="toggler">task 3</div>
+            <ul class="toggler-target">
+                <li class="todo">task 1</li>
+                <li class="todo">task 2</li>
+                <li>
+                    <div class="toggler">task 3</div>
+                    <ul class="toggler-target">
+                        <li class="todo">task 1</li>
+                        <li class="todo">task 2</li>
+                        <li class="todo">task 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="todo">task 4</li>
+    </ul>
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>
